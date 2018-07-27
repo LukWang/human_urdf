@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<robot name="human_arm">
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<box size="0.2 0.4 0.6"/>
+			</geometry>
+			<origin xyz="0 0 1.0"/>
+		</visual>
+	</link>
+
+	<link name="shoulder_1">
+		<visual>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="body_to_shouder_1" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="-1.57075 0 0 " xyz="0 0.25 1.25"/>
+		<parent link="base_link"/>
+		<child link="shoulder_1"/>
+	</joint>
+
+
+	<link name="shoulder_2">
+		<visual>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="shoulder_1_to_shouder_2" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="1.57075 -1.57075 0" xyz="0 0 0"/>
+		<parent link="shoulder_1"/>
+		<child link="shoulder_2"/>
+	</joint>
+
+
+	<link name="shoulder_3">
+		<visual>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="shoulder_2_to_shouder_3" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="1.57075 -1.57075 0" xyz="0 0 0"/>
+		<parent link="shoulder_2"/>
+		<child link="shoulder_3"/>
+	</joint>
+
+	<link name="upper_arm_inner">
+		<visual>
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0.001 0 0"/>
+			<material name="blue">
+				<color rgba="0 0 .8 1"/>
+			</material>	
+		</visual>
+	</link>
+
+	<joint name="shoulder_3_to_upper_arm_inner" type="fixed">
+		<origin rpy="0 0 1.57075" xyz="0 0 0.15"/>
+		<parent link="shoulder_3"/>
+		<child link="upper_arm_inner"/>
+	</joint>
+
+	<link name="upper_arm_outter">
+		<visual>
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="-0.001 0 0"/>
+			<material name="red">
+				<color rgba="1 0 0 1"/>
+			</material>
+		</visual>
+	</link>
+
+	<joint name="shoulder_3_to_upper_arm_outter" type="fixed">
+		<origin rpy="0 0 1.57075" xyz="0 0 0.15"/>
+		<parent link="shoulder_3"/>
+		<child link="upper_arm_outter"/>
+	</joint>
+
+	<link name="elbow_1">
+		<visual>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="shoulder3_to_elbow_1" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="1.57075 0 1.57075" xyz="0 0 0.3"/>
+		<parent link="shoulder_3"/>
+		<child link="elbow_1"/>
+	</joint>
+
+	<link name="elbow_2">
+		<visual>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="elbow_1_to_elbow_2" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="-1.57075 -1.57075 0" xyz="0 0.1 0"/>
+		<parent link="elbow_1"/>
+		<child link="elbow_2"/>
+	</joint>
+
+	<link name="forearm_inner">
+		<visual>
+			<geometry>
+				<cylinder length="0.24" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="-0.001 0 0"/>
+			<material name="blue"/>
+		</visual>
+	</link>
+
+	<joint name="elbow_2_to_forearm_inner" type="fixed">
+		<origin rpy="0 0 -1.57075" xyz="0 0 0.17"/>
+		<parent link="elbow_2"/>
+		<child link="forearm_inner"/>
+	</joint>
+
+	<link name="forearm_outter">
+		<visual>
+			<geometry>
+				<cylinder length="0.24" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0.001 0 0"/>
+			<material name="red"/>
+		</visual>
+	</link>
+
+	<joint name="elbow_2_to_forearm_outter" type="fixed">
+		<origin rpy="0 0 -1.57075" xyz="0 0 0.17"/>
+		<parent link="elbow_2"/>
+		<child link="forearm_outter"/>
+	</joint>
+
+	<link name="hand">
+		<visual>
+			<geometry>
+				<box size="0.04 0.08 0.1"/>
+			</geometry>
+			<origin rpy="0 1.57075 0" xyz="0 0 -0.02"/>
+		</visual>
+	</link>
+
+	<joint name="elbow_2_to_hand" type="fixed">
+		<origin rpy="0 -1.57075 0" xyz="0 0 0.31"/>
+		<parent link="elbow_2"/>
+		<child link="hand"/>
+	</joint>
+
+	<link name="neck">
+		<visual>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="body_to_neck" type="fixed">
+		<origin rpy="0 0 0" xyz="0 0 1.35"/>
+		<parent link="base_link"/>
+		<child link="neck"/>
+	</joint>
+
+	<link name="head">
+		<visual>
+			<geometry>
+				<sphere radius="0.14"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0.04 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="neck_to_head" type="fixed">
+		<origin rpy="0 0 0" xyz="0 0 0.15"/>
+		<parent link="neck"/>
+		<child link="head"/>
+	</joint>
+
+	<link name="left_eye">
+		<visual>
+			<geometry>
+				<cylinder length="0.2" radius="0.02"/>
+			</geometry>
+			<origin rpy="0 1.57075 0" xyz="0 0 0"/>
+			<material name="white">
+				<color rgba="1 1 1 1"/>
+			</material>
+		</visual>
+	</link>
+
+	<joint name="head_l_eye" type="fixed">
+		<origin rpy="0 0 0" xyz="0.08 0.05 0"/>
+		<parent link="head"/>
+		<child link="left_eye"/>
+	</joint>	
+	
+	<link name="right_eye">
+		<visual>
+			<geometry>
+				<cylinder length="0.2" radius="0.02"/>
+			</geometry>
+			<origin rpy="0 1.57075 0" xyz="0 0 0"/>
+			<material name="white">
+				<color rgba="1 1 1 1"/>
+			</material>
+		</visual>
+	</link>
+
+	<joint name="head_r_eye" type="fixed">
+		<origin rpy="0 0 0" xyz="0.08 -0.05 0"/>
+		<parent link="head"/>
+		<child link="right_eye"/>
+	</joint>	
+
+	<link name="mouth">
+		<visual>
+			<geometry>
+				<box size="0.02 0.1 0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<material name="white">
+				<color rgba="1 1 1 1"/>
+			</material>
+		</visual>
+	</link>
+
+	<joint name="head_mouth" type="fixed">
+		<origin rpy="0 0 0" xyz="0.15 0 -0.06"/>
+		<parent link="head"/>
+		<child link="mouth"/>
+	</joint>
+
+	<link name="ref">
+		<visual>
+			<geometry>
+				<sphere radius="0.001"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="ref_joint" type="fixed">
+		<origin rpy="0 3.1415926 0" xyz="0 0 0"/>
+		<parent link="base_link"/>
+		<child link="ref"/>
+	</joint>
+
+</robot>
+

@@ -1,0 +1,16 @@
+<launch>
+  <group ns="arm_ns">  
+    <arg name="model" />  
+    <arg name="gui" default="True" /> 
+    <arg name="rvizconfig" default="$(find virt_human_arm)/rviz/urdf.rviz" /> 
+    <param name="robot_description" textfile="$(find virt_human_arm)/urdf/virt_human_arm.urdf" />  
+    <param name="use_gui" value="$(arg gui)"/> 
+    <!--node name="joint_state_publisher_fake" pkg="joint_state_publisher" type="joint_state_publisher" /-->                                                      
+    <node name="joint_state_publisher" pkg="ros_myo" type="mymove_arm.py" />                                                      
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />  
+    <node name="rviz_human_armi" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true">
+		
+	</node>
+  </group>
+
+</launch> 

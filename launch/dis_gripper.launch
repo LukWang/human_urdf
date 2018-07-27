@@ -1,0 +1,4 @@
+<launch>
+    <param name="robot_description" textfile="/home/luk/catkin_ws/src/robotiq-jade-devel/robotiq_c2_model_visualization/urdf/robotiq_c2_model.urdf" />
+    <node name="rviz_gripper" pkg="rviz" type="rviz"/>
+</launch>

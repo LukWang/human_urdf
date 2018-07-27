@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot name="test_model">
+    <link name="world"/>
+
+	<joint name="world_to_hip" type="fixed">
+		<origin rpy="1.57079 0 0" xyz="0 0 0"/>
+		<parent link="world"/>
+		<child link="hip"/>
+    </joint>
+        
+    
+	<link name="hip">
+		<visual>
+			<geometry>
+				<cylinder length="0.05" radius="0.02"/>
+			</geometry>
+			<origin xyz="0 0 0"/>
+		</visual>
+	</link>
+
+    <link name="spine1_z"/>
+
+	<joint name="hip_to_spine1_z" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="0 0 0 " xyz="0 0 0"/>
+		<parent link="hip"/>
+		<child link="spine1_z"/>
+	</joint>
+
+    <link name="spine1_x"/>
+
+	<joint name="spine1_z_to_spine1_x" type="continuous">
+		<axis xyz="1 0 0"/>
+		<origin rpy="0 0 0 " xyz="0 0 0"/>
+		<parent link="spine1_z"/>
+		<child link="spine1_x"/>
+    </joint>
+    
+    <link name="spine1_y"/>
+
+	<joint name="spine1_x_to_spine1_y" type="continuous">
+		<axis xyz="0 1 0"/>
+		<origin rpy="0 0 0 " xyz="0 0 0"/>
+		<parent link="spine1_x"/>
+		<child link="spine1_y"/>
+    </joint>
+
+    <link name="spine1">
+		<visual>
+	<joint name="spine1_y_to_spine1" type="fixed">
+		<origin rpy="0 0 0 " xyz="0.0 0.0461714 -0.0692569"/>
+		<parent link="spine1_y"/>
+		<child link="spine1"/>
+    </joint>
+			<geometry>
+				<cylinder length="0.05" radius="0.02"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="spine1_y_to_spine1" type="fixed">
+		<origin rpy="0 0 0 " xyz="0.0 0.0461714 -0.0692569"/>
+		<parent link="spine1_y"/>
+		<child link="spine1"/>
+    </joint>
+
+
+
+
+    <link name="spine2_z"/>
+
+	<joint name="spine1_to_spine2_z" type="continuous">
+		<axis xyz="0 0 1"/>
+		<origin rpy="0 0 0 " xyz="0 0 0"/>
+		<parent link="spine1"/>
+		<child link="spine2_z"/>
+	</joint>
+
+    <link name="spine2_x"/>
+
+	<joint name="spine2_z_to_spine2_x" type="continuous">
+		<axis xyz="1 0 0"/>
+		<origin rpy="0 0 0 " xyz="0 0 0"/>
+		<parent link="spine2_z"/>
+		<child link="spine2_x"/>
+    </joint>
+    
+    <link name="spine2_y"/>
+
+	<joint name="spine2_x_to_spine2_y" type="continuous">
+		<axis xyz="0 1 0"/>
+		<origin rpy="0 0 0 " xyz="0 0 0"/>
+		<parent link="spine2_x"/>
+		<child link="spine2_y"/>
+    </joint>
+
+    <link name="spine2">
+		<visual>
+			<geometry>
+				<cylinder length="0.05" radius="0.02"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="spine2_y_to_spine2" type="fixed">
+		<origin rpy="0 0 0 " xyz="0.0 0.016035 -0.09094"/>
+		<parent link="spine2_y"/>
+		<child link="spine2"/>
+    </joint>
+
+
+
+
+
+
+</robot>
+
