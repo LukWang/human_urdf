@@ -646,4 +646,39 @@
 		<parent link="lHand_y"/>
 		<child link="lHand"/>
   </joint>
+
+  <link name="lHand_alter"/>
+  <joint name="lHand_to_lHand_alter" type="fixed">
+		<origin rpy="0 -1.5707963 0" xyz="0.0 0.0 0.0"/>
+		<parent link="lHand"/>
+		<child link="lHand_alter"/>
+  </joint>
+
+  <link name="rHand_middle"/>
+  <joint name="rHand_to_rHand_middle" type="fixed">
+    <origin rpy="0.0 1.5707963 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="rHand"/>
+    <child link="rHand_middle"/>
+  </joint>
+  
+  <link name="rHand_alter"/>
+  <joint name="rHand_middle_to_rHand_alter" type="fixed">
+    <origin rpy="0.0 0.0 0.78539" xyz="0.0 0.0 0.07"/>
+    <parent link="rHand_middle"/>
+    <child link="rHand_alter"/>
+  </joint>
+  
+  <link name="fetch_middle"/>
+  <joint name="spine3_to_fetch_middle" type="fixed">
+    <origin rpy="-1.5707963 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="spine3"/>
+    <child link="fetch_middle"/>
+  </joint>
+  
+  <link name="fetch_position"/>
+  <joint name="fetch_middle_fetch_position" type="fixed">
+    <origin rpy="0.0 0.0 2.3561863" xyz="0.0 0.2 -0.3"/>
+    <parent link="fetch_middle"/>
+    <child link="fetch_position"/>
+  </joint>
 </robot>

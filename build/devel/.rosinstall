@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/luk/catkin_ws/src/virt_human_arm/build/devel/setup.sh

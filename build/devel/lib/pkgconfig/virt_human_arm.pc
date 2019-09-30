@@ -1,0 +1,8 @@
+prefix=/home/luk/catkin_ws/src/virt_human_arm/build/devel
+
+Name: virt_human_arm
+Description: Description of virt_human_arm
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/luk/catkin_ws/src/virt_human_arm/build/devel/lib 
+Requires: moveit_ros_planning_interface moveit_core interactive_markers

@@ -1,14 +1,22 @@
 <launch>
-  <group ns="arm_ns">  
+  <group ns="human_1"> 
+    <param name="tf_prefix" value="human_1" /> 
     <arg name="model" />  
     <arg name="gui" default="True" /> 
     <arg name="rvizconfig" default="$(find virt_human_arm)/rviz/human_model.rviz" /> 
     <param name="robot_description" textfile="$(find virt_human_arm)/urdf/bjh_model.urdf" />  
     <param name="use_gui" value="$(arg gui)"/> 
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />  
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">  
+    </node>
     <node name="rviz_human_armi" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true">
 		
 	</node>
   </group>
 
+  <group ns="human_imu"> 
+    <param name="tf_prefix" value="human_imu" /> 
+    <param name="robot_description" textfile="$(find virt_human_arm)/urdf/bjh_model.urdf" />  
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">  
+    </node>
+  </group>
 </launch> 

@@ -9,9 +9,10 @@ Panels:
         - /RobotModel1
         - /TF1
         - /TF1/Frames1
-        - /TF1/Frames1/camera_base1
-        - /TF1/Frames1/prime_camera_base1
-      Splitter Ratio: 0.5
+        - /RobotModel2
+        - /RobotModel3
+        - /RobotModel3/Status1
+      Splitter Ratio: 0.755813956
     Tree Height: 741
   - Class: rviz/Selection
     Name: Selection
@@ -56,6 +57,504 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
+      Enabled: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: RobotModel
+      Robot Description: human_imu/robot_description
+      TF Prefix: /human_imu
+      Update Interval: 0
+      Value: false
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base:
+          Value: false
+        base_link:
+          Value: false
+        camera_base_1:
+          Value: false
+        camera_base_2:
+          Value: false
+        desired_goal:
+          Value: false
+        ee_link:
+          Value: false
+        forearm_link:
+          Value: false
+        human_1/fetch_middle:
+          Value: false
+        human_1/fetch_position:
+          Value: true
+        human_1/hip:
+          Value: false
+        human_1/hip_x:
+          Value: false
+        human_1/hip_y:
+          Value: false
+        human_1/hip_z:
+          Value: false
+        human_1/human_base:
+          Value: false
+        human_1/lArm:
+          Value: false
+        human_1/lArm_x:
+          Value: false
+        human_1/lArm_y:
+          Value: false
+        human_1/lArm_z:
+          Value: false
+        human_1/lForeArm:
+          Value: false
+        human_1/lForeArm_x:
+          Value: false
+        human_1/lForeArm_y:
+          Value: false
+        human_1/lForeArm_z:
+          Value: false
+        human_1/lHand:
+          Value: false
+        human_1/lHand_alter:
+          Value: false
+        human_1/lHand_x:
+          Value: false
+        human_1/lHand_y:
+          Value: false
+        human_1/lHand_z:
+          Value: false
+        human_1/lShoulder:
+          Value: false
+        human_1/lWrist:
+          Value: false
+        human_1/lWrist_x:
+          Value: false
+        human_1/lWrist_y:
+          Value: false
+        human_1/lWrist_z:
+          Value: false
+        human_1/neck:
+          Value: false
+        human_1/neck_x:
+          Value: false
+        human_1/neck_y:
+          Value: false
+        human_1/neck_z:
+          Value: false
+        human_1/rArm:
+          Value: false
+        human_1/rArm_x:
+          Value: false
+        human_1/rArm_y:
+          Value: false
+        human_1/rArm_z:
+          Value: false
+        human_1/rForeArm:
+          Value: false
+        human_1/rForeArm_x:
+          Value: false
+        human_1/rForeArm_y:
+          Value: false
+        human_1/rForeArm_z:
+          Value: false
+        human_1/rHand:
+          Value: false
+        human_1/rHand_alter:
+          Value: false
+        human_1/rHand_middle:
+          Value: false
+        human_1/rHand_x:
+          Value: false
+        human_1/rHand_y:
+          Value: false
+        human_1/rHand_z:
+          Value: false
+        human_1/rShoulder:
+          Value: false
+        human_1/rWrist:
+          Value: false
+        human_1/rWrist_x:
+          Value: false
+        human_1/rWrist_y:
+          Value: false
+        human_1/rWrist_z:
+          Value: false
+        human_1/ref:
+          Value: false
+        human_1/ref1:
+          Value: false
+        human_1/spine:
+          Value: false
+        human_1/spine1:
+          Value: false
+        human_1/spine1_x:
+          Value: false
+        human_1/spine1_y:
+          Value: false
+        human_1/spine1_z:
+          Value: false
+        human_1/spine2:
+          Value: false
+        human_1/spine2_x:
+          Value: false
+        human_1/spine2_y:
+          Value: false
+        human_1/spine2_z:
+          Value: false
+        human_1/spine3:
+          Value: false
+        human_1/spine3_x:
+          Value: false
+        human_1/spine3_y:
+          Value: false
+        human_1/spine3_z:
+          Value: false
+        human_base:
+          Value: false
+        human_imu/fetch_middle:
+          Value: false
+        human_imu/fetch_position:
+          Value: false
+        human_imu/hip:
+          Value: false
+        human_imu/hip_x:
+          Value: false
+        human_imu/hip_y:
+          Value: false
+        human_imu/hip_z:
+          Value: false
+        human_imu/human_base:
+          Value: false
+        human_imu/lArm:
+          Value: false
+        human_imu/lArm_x:
+          Value: false
+        human_imu/lArm_y:
+          Value: false
+        human_imu/lArm_z:
+          Value: false
+        human_imu/lForeArm:
+          Value: false
+        human_imu/lForeArm_x:
+          Value: false
+        human_imu/lForeArm_y:
+          Value: false
+        human_imu/lForeArm_z:
+          Value: false
+        human_imu/lHand:
+          Value: false
+        human_imu/lHand_alter:
+          Value: false
+        human_imu/lHand_x:
+          Value: false
+        human_imu/lHand_y:
+          Value: false
+        human_imu/lHand_z:
+          Value: false
+        human_imu/lShoulder:
+          Value: false
+        human_imu/lWrist:
+          Value: false
+        human_imu/lWrist_x:
+          Value: false
+        human_imu/lWrist_y:
+          Value: false
+        human_imu/lWrist_z:
+          Value: false
+        human_imu/neck:
+          Value: false
+        human_imu/neck_x:
+          Value: false
+        human_imu/neck_y:
+          Value: false
+        human_imu/neck_z:
+          Value: false
+        human_imu/rArm:
+          Value: false
+        human_imu/rArm_x:
+          Value: false
+        human_imu/rArm_y:
+          Value: false
+        human_imu/rArm_z:
+          Value: false
+        human_imu/rForeArm:
+          Value: false
+        human_imu/rForeArm_x:
+          Value: false
+        human_imu/rForeArm_y:
+          Value: false
+        human_imu/rForeArm_z:
+          Value: false
+        human_imu/rHand:
+          Value: false
+        human_imu/rHand_alter:
+          Value: false
+        human_imu/rHand_middle:
+          Value: false
+        human_imu/rHand_x:
+          Value: false
+        human_imu/rHand_y:
+          Value: false
+        human_imu/rHand_z:
+          Value: false
+        human_imu/rShoulder:
+          Value: false
+        human_imu/rWrist:
+          Value: false
+        human_imu/rWrist_x:
+          Value: false
+        human_imu/rWrist_y:
+          Value: false
+        human_imu/rWrist_z:
+          Value: false
+        human_imu/ref:
+          Value: false
+        human_imu/ref1:
+          Value: false
+        human_imu/spine:
+          Value: false
+        human_imu/spine1:
+          Value: false
+        human_imu/spine1_x:
+          Value: false
+        human_imu/spine1_y:
+          Value: false
+        human_imu/spine1_z:
+          Value: false
+        human_imu/spine2:
+          Value: false
+        human_imu/spine2_x:
+          Value: false
+        human_imu/spine2_y:
+          Value: false
+        human_imu/spine2_z:
+          Value: false
+        human_imu/spine3:
+          Value: false
+        human_imu/spine3_x:
+          Value: false
+        human_imu/spine3_y:
+          Value: false
+        human_imu/spine3_z:
+          Value: false
+        imu_1:
+          Value: false
+        imu_2:
+          Value: false
+        imu_3:
+          Value: false
+        imu_4:
+          Value: false
+        imu_5:
+          Value: false
+        marker_0:
+          Value: false
+        rect_goal:
+          Value: false
+        shoulder_link:
+          Value: false
+        tool0:
+          Value: false
+        tool0_controller:
+          Value: false
+        tool0_custom:
+          Value: false
+        upper_arm_link:
+          Value: false
+        ur_base:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        marker_0:
+          camera_base_1:
+            {}
+          camera_base_2:
+            {}
+          human_1/human_base:
+            human_1/ref1:
+              human_1/ref:
+                human_1/hip_z:
+                  human_1/hip_x:
+                    human_1/hip_y:
+                      human_1/hip:
+                        human_1/spine:
+                          human_1/spine1_z:
+                            human_1/spine1_x:
+                              human_1/spine1_y:
+                                human_1/spine1:
+                                  human_1/spine2_z:
+                                    human_1/spine2_x:
+                                      human_1/spine2_y:
+                                        human_1/spine2:
+                                          human_1/spine3_z:
+                                            human_1/spine3_x:
+                                              human_1/spine3_y:
+                                                human_1/spine3:
+                                                  human_1/fetch_middle:
+                                                    human_1/fetch_position:
+                                                      {}
+                                                  human_1/neck_z:
+                                                    human_1/neck_x:
+                                                      human_1/neck_y:
+                                                        human_1/lShoulder:
+                                                          human_1/lArm_z:
+                                                            human_1/lArm_x:
+                                                              human_1/lArm_y:
+                                                                human_1/lArm:
+                                                                  human_1/lForeArm_z:
+                                                                    human_1/lForeArm_x:
+                                                                      human_1/lForeArm_y:
+                                                                        human_1/lForeArm:
+                                                                          human_1/lWrist_z:
+                                                                            human_1/lWrist_x:
+                                                                              human_1/lWrist_y:
+                                                                                human_1/lWrist:
+                                                                                  human_1/lHand_z:
+                                                                                    human_1/lHand_x:
+                                                                                      human_1/lHand_y:
+                                                                                        human_1/lHand:
+                                                                                          human_1/lHand_alter:
+                                                                                            {}
+                                                        human_1/neck:
+                                                          {}
+                                                        human_1/rShoulder:
+                                                          human_1/rArm_z:
+                                                            human_1/rArm_x:
+                                                              human_1/rArm_y:
+                                                                human_1/rArm:
+                                                                  human_1/rForeArm_z:
+                                                                    human_1/rForeArm_x:
+                                                                      human_1/rForeArm_y:
+                                                                        human_1/rForeArm:
+                                                                          human_1/rWrist_z:
+                                                                            human_1/rWrist_x:
+                                                                              human_1/rWrist_y:
+                                                                                human_1/rWrist:
+                                                                                  human_1/rHand_z:
+                                                                                    human_1/rHand_x:
+                                                                                      human_1/rHand_y:
+                                                                                        human_1/rHand:
+                                                                                          human_1/rHand_middle:
+                                                                                            human_1/rHand_alter:
+                                                                                              {}
+          human_imu/human_base:
+            human_imu/ref1:
+              human_imu/ref:
+                human_imu/hip_z:
+                  human_imu/hip_x:
+                    human_imu/hip_y:
+                      human_imu/hip:
+                        human_imu/spine:
+                          human_imu/spine1_z:
+                            human_imu/spine1_x:
+                              human_imu/spine1_y:
+                                human_imu/spine1:
+                                  human_imu/spine2_z:
+                                    human_imu/spine2_x:
+                                      human_imu/spine2_y:
+                                        human_imu/spine2:
+                                          human_imu/spine3_z:
+                                            human_imu/spine3_x:
+                                              human_imu/spine3_y:
+                                                human_imu/spine3:
+                                                  human_imu/fetch_middle:
+                                                    human_imu/fetch_position:
+                                                      {}
+                                                  human_imu/neck_z:
+                                                    human_imu/neck_x:
+                                                      human_imu/neck_y:
+                                                        human_imu/lShoulder:
+                                                          human_imu/lArm_z:
+                                                            human_imu/lArm_x:
+                                                              human_imu/lArm_y:
+                                                                human_imu/lArm:
+                                                                  human_imu/lForeArm_z:
+                                                                    human_imu/lForeArm_x:
+                                                                      human_imu/lForeArm_y:
+                                                                        human_imu/lForeArm:
+                                                                          human_imu/lWrist_z:
+                                                                            human_imu/lWrist_x:
+                                                                              human_imu/lWrist_y:
+                                                                                human_imu/lWrist:
+                                                                                  human_imu/lHand_z:
+                                                                                    human_imu/lHand_x:
+                                                                                      human_imu/lHand_y:
+                                                                                        human_imu/lHand:
+                                                                                          human_imu/lHand_alter:
+                                                                                            {}
+                                                        human_imu/neck:
+                                                          {}
+                                                        human_imu/rShoulder:
+                                                          human_imu/rArm_z:
+                                                            human_imu/rArm_x:
+                                                              human_imu/rArm_y:
+                                                                human_imu/rArm:
+                                                                  human_imu/rForeArm_z:
+                                                                    human_imu/rForeArm_x:
+                                                                      human_imu/rForeArm_y:
+                                                                        human_imu/rForeArm:
+                                                                          human_imu/rWrist_z:
+                                                                            human_imu/rWrist_x:
+                                                                              human_imu/rWrist_y:
+                                                                                human_imu/rWrist:
+                                                                                  human_imu/rHand_z:
+                                                                                    human_imu/rHand_x:
+                                                                                      human_imu/rHand_y:
+                                                                                        human_imu/rHand:
+                                                                                          human_imu/rHand_middle:
+                                                                                            human_imu/rHand_alter:
+                                                                                              {}
+            imu_1:
+              {}
+            imu_2:
+              {}
+            imu_3:
+              {}
+            imu_4:
+              {}
+            imu_5:
+              {}
+          ur_base:
+            base_link:
+              base:
+                tool0_controller:
+                  {}
+              shoulder_link:
+                upper_arm_link:
+                  forearm_link:
+                    wrist_1_link:
+                      wrist_2_link:
+                        wrist_3_link:
+                          ee_link:
+                            {}
+                          tool0:
+                            tool0_custom:
+                              {}
+            desired_goal:
+              {}
+            rect_goal:
+              {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
       Enabled: true
       Links:
         All Links Enabled: true
@@ -63,6 +562,14 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        fetch_middle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fetch_position:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         hip:
           Alpha: 1
           Show Axes: false
@@ -123,6 +630,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        lHand_alter:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         lHand_x:
           Alpha: 1
           Show Axes: false
@@ -213,6 +724,14 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        rHand_alter:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rHand_middle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         rHand_x:
           Alpha: 1
           Show Axes: false
@@ -312,106 +831,83 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
       Name: RobotModel
-      Robot Description: arm_ns/robot_description
+      Robot Description: robot_description
+      TF Prefix: /human_1
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ee_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tool0_custom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wrist_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_3_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: /robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/TF
-      Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: false
-        camera_base:
-          Value: true
-        hip:
-          Value: true
-        hip_y:
-          Value: true
-        human_base:
-          Value: true
-        lArm:
-          Value: true
-        lArm_y:
-          Value: false
-        lForeArm:
-          Value: true
-        lForeArm_y:
-          Value: false
-        lHand:
-          Value: true
-        lHand_y:
-          Value: false
-        lShoulder:
-          Value: false
-        lWrist:
-          Value: true
-        lWrist_y:
-          Value: true
-        marker_0:
-          Value: true
-        marker_10:
-          Value: true
-        neck:
-          Value: false
-        neck_y:
-          Value: false
-        prime_camera_base:
-          Value: true
-        rArm:
-          Value: true
-        rArm_y:
-          Value: false
-        rForeArm:
-          Value: true
-        rForeArm_y:
-          Value: false
-        rHand:
-          Value: true
-        rHand_y:
-          Value: false
-        rShoulder:
-          Value: true
-        rWrist:
-          Value: true
-        rWrist_y:
-          Value: true
-        ref:
-          Value: true
-        ref1:
-          Value: true
-        spine:
-          Value: true
-        spine1:
-          Value: false
-        spine1_y:
-          Value: false
-        spine2:
-          Value: false
-        spine2_y:
-          Value: false
-        spine3:
-          Value: false
-        spine3_y:
-          Value: false
-        ur_base:
-          Value: true
-      Marker Scale: 0.5
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: true
-      Tree:
-        marker_0:
-          camera_base:
-            {}
-          prime_camera_base:
-            marker_10:
-              {}
-          ur_base:
-            {}
-      Update Interval: 0
-      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -437,7 +933,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.27500963
+      Distance: 4.85992384
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -452,10 +948,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.305398107
+      Pitch: 0.390398711
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.0285605416
+      Yaw: 2.80855966
     Saved: ~
 Window Geometry:
   Displays:
@@ -473,5 +969,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1080
-  X: 840
-  Y: 24
+  X: 1437
+  Y: 210
